@@ -10,6 +10,10 @@ public class Cart {
     public void addProduct(Product product, int quantity) {
         items.put(product, items.getOrDefault(product, 0) + quantity);
     }
+    //Очистка корзины - не используется, для иллюстрации Dependency Inversion Principle
+    public void clearCart() {
+        items.clear();
+    }
 
     public void showCart() {
         if (items.isEmpty()) {
